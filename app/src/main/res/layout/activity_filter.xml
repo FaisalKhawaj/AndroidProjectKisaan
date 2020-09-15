@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bg"
+    android:layout_height="match_parent"
+    tools:context="com.example.aso.FilterActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/province_spinner_layout"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingLeft="15dp"
+            android:text="Select Province"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            />
+        <Spinner
+            android:id="@+id/province_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/spinner_title"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/city_spinner_layout"
+            android:layout_below="@+id/province_spinner_layout"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="15dp"
+                android:text="Select City"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+            <Spinner
+                android:id="@+id/city_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:prompt="@string/spinner_title"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/street_spinner_layout"
+            android:orientation="horizontal"
+            android:layout_below="@+id/city_spinner_layout"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="15dp"
+                android:text="Select Street"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+            <Spinner
+                android:id="@+id/street_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:prompt="@string/spinner_title"/>
+        </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/select_price_range_tv"
+        android:layout_below="@id/street_spinner_layout"
+        android:text="Select Price range"
+        android:layout_height="wrap_content"
+/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/select_price_range_tv"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:id="@+id/price_filter_layout"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Min"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Min Price"
+            android:inputType="number"
+            android:text="0"
+            android:id="@+id/min_price_et"
+            android:layout_weight="1"
+/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Max"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/max_price_et"
+            android:layout_height="wrap_content"
+            android:hint="Max Price"
+            android:inputType="number"
+            android:text="0"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+        <Button
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/apply_filter"
+            android:text="Apply Filter"
+            android:layout_below="@id/price_filter_layout"
+            />
+
+    </RelativeLayout>
+</ScrollView>
